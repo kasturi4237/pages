@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* In index.css or App.css */
+.hero-gradient {
+  background: linear-gradient(127.49deg, #FFD8E7 12.88%, #FF7AE5 87.12%);
+}
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=DM+Sans:wght@400;700&display=swap');
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
