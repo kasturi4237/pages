@@ -14,15 +14,15 @@ const ExtensionTutorialModal = ({ show, onClose }) => {
       content:
         "Autofill pulls from your profile. Note: Gray icons indicate unsupported jobs.",
       position: {
-        top: "calc(50% - 122px - 353.5px)",
-        right: "160px",
-      },
+    top: "135px",        // ← change this line
+    right: "160px"
+  }
     },
     {
       content: "Click on AUTOFILL to see the extension in action.",
       position: {
-        top: "calc(50% - 98px - 375.5px)",
-        right: "480px",
+        top: "135px",        // ← change this line
+        right: "460px"
       },
     },
     {
@@ -47,13 +47,19 @@ const ExtensionTutorialModal = ({ show, onClose }) => {
       title: "Tailor your resume for each job in seconds - right on the page.",
       content:
         "Spot missing keywords instantly and add them to your resume with one click!",
-      position: { top: "250px", left: "940px" },
+      position: {
+        top: "135px",        // ← change this line
+        right: "460px"
+      },
     },
     {
       title: "Click any text in profile to copy it instantly to your clipboard.",
       content:
         "Seamlessly copy your details and paste them into any application.",
-      position: { top: "300px", left: "960px" },
+      position: {
+        top: "135px",        // ← change this line
+        right: "460px"
+      },
     },
     {
       title: "🎉 You’re All Set!",
@@ -80,12 +86,12 @@ const ExtensionTutorialModal = ({ show, onClose }) => {
 
   return (
     <>
-      {/* Step-specific overlays */}
       {currentStep === 0 && (
-        <div className="z-[60] fixed top-0 right-0">
-          <DragTrack />
-        </div>
-      )}
+  <div className="z-[60] fixed top-0 right-0">
+    <DragTrack onStepNext={() => setCurrentStep(1)} />
+  </div>
+)}
+
       {currentStep === 1 && (
         <div className="z-[60] fixed top-0 right-0">
           <ExtensionSidebar />

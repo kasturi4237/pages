@@ -1,38 +1,48 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
-const DragTrack = () => {
+export default function DragTrack({ logoSVG, onStepNext }) {
+  const trackRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleIconClick = () => {
+    if (onStepNext) {
+      onStepNext();
+    }
+  };
+
+  const defaultSVG = (
+   <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 20C0 8.95431 8.95431 0 20 0H80V80H20C8.95431 80 0 71.0457 0 60V20Z" fill="#AA1299"/>
+<path d="M47.9258 32.8163C48.2574 33.3951 48.2574 34.1064 47.9258 34.6853L45.0073 39.7807C44.6723 40.3656 44.0498 40.7264 43.3757 40.7264H42.7966C42.4818 40.7264 42.2559 41.0299 42.3464 41.3315L47.8305 59.6171C47.9294 59.947 47.84 60.3047 47.5974 60.5492L41.1375 67.0606C40.7698 67.4313 40.1705 67.4313 39.8027 67.0606L33.3429 60.5492C33.1003 60.3047 33.0108 59.947 33.1098 59.6171L38.5939 41.3315C38.6843 41.0299 38.4585 40.7264 38.1436 40.7264H37.5645C36.8905 40.7264 36.268 40.3656 35.933 39.7807L33.0144 34.6853C32.6829 34.1064 32.6829 33.3951 33.0144 32.8163L35.933 27.7208C36.268 27.1359 36.8905 26.7751 37.5645 26.7751H43.3757C44.0498 26.7751 44.6723 27.1359 45.0073 27.7208L47.9258 32.8163Z" fill="white"/>
+<path d="M62.3018 29.8654C63.6282 32.1811 63.6281 35.0262 62.3017 37.3418L53.2886 53.076C53.0834 53.4343 52.5491 53.3729 52.4305 52.9774L50.2244 45.6222C49.928 44.6341 50.0506 43.5676 50.5634 42.6725L54.688 35.4728C55.3514 34.315 55.3514 32.8923 54.6881 31.7344L48.9624 21.7388C48.2924 20.5691 47.0474 19.8475 45.6994 19.8475H34.2998C32.9518 19.8475 31.7069 20.5691 31.0368 21.7388L25.311 31.7345C24.6478 32.8923 24.6478 34.3149 25.311 35.4728L30.0382 43.725C30.5596 44.6351 30.6771 45.7216 30.3625 46.7221L28.1009 53.9156C27.9779 54.3066 27.4483 54.3639 27.2446 54.0082L17.6982 37.3417C16.3719 35.0261 16.3719 32.1811 17.6982 29.8655L25.6119 16.0495C26.9519 13.7099 29.4418 12.2667 32.138 12.2667H47.8621C50.5583 12.2667 53.0482 13.7099 54.3883 16.0495L62.3018 29.8654Z" fill="white"/>
+</svg>
+
+  );
+
   return (
-    <div className="absolute right-0 top-0 w-[90px] h-[1117px] flex flex-row justify-end items-start py-[120px] isolate z-[1]">
-      {/* Extension Side Icon */}
-      <div className="w-[90px] h-[100px] flex flex-row justify-end items-center pl-[10px] pr-0 py-[10px] isolate shadow-[0px_8px_12px_6px_rgba(0,0,0,0.15)] drop-shadow-[0px_4px_4px_rgba(0,0,0,0.3)] z-0">
-        {/* Frame 924 */}
-        <div className="w-[80px] h-[80px] bg-[#AA1299] rounded-l-[20px] flex justify-center items-center p-2 z-0 relative">
-          {/* Inline Vector */}
-          <svg
-            width="48"
-            height="56"
-            viewBox="0 0 48 56"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="absolute"
-          >
-            <path
-              d="M31.9258 20.8163C32.2574 21.3951 32.2574 22.1064 31.9258 22.6853L29.0073 27.7807C28.6723 28.3656 28.0498 28.7264 27.3757 28.7264H26.7966C26.4818 28.7264 26.2559 29.0299 26.3464 29.3315L31.8305 47.6171C31.9294 47.947 31.84 48.3047 31.5974 48.5492L25.1375 55.0606C24.7698 55.4313 24.1705 55.4313 23.8027 55.0606L17.3429 48.5492C17.1003 48.3047 17.0108 47.947 17.1098 47.6171L22.5939 29.3315C22.6843 29.0299 22.4585 28.7264 22.1436 28.7264H21.5645C20.8905 28.7264 20.268 28.3656 19.933 27.7807L17.0144 22.6853C16.6829 22.1064 16.6829 21.3951 17.0144 20.8163L19.933 15.7208C20.268 15.1359 20.8905 14.7751 21.5645 14.7751H27.3757C28.0498 14.7751 28.6723 15.1359 29.0073 15.7208L31.9258 20.8163Z"
-              fill="white"
-            />
-            <path
-              d="M46.3018 17.8654C47.6282 20.1811 47.6281 23.0262 46.3017 25.3418L37.2886 41.076C37.0834 41.4343 36.5491 41.3729 36.4305 40.9774L34.2244 33.6222C33.928 32.6341 34.0506 31.5676 34.5634 30.6725L38.688 23.4728C39.3514 22.315 39.3514 20.8923 38.6881 19.7344L32.9624 9.73885C32.2924 8.56912 31.0474 7.84755 29.6994 7.84755H18.2998C16.9518 7.84755 15.7069 8.56912 15.0368 9.73885L9.31103 19.7345C8.64778 20.8923 8.64778 22.3149 9.31104 23.4728L14.0382 31.725C14.5596 32.6351 14.6771 33.7216 14.3625 34.7221L12.1009 41.9156C11.9779 42.3066 11.4483 42.3639 11.2446 42.0082L1.69824 25.3417C0.371914 23.0261 0.371915 20.1811 1.69824 17.8655L9.61186 4.04949C10.9519 1.70991 13.4418 0.266663 16.138 0.266663H31.8621C34.5583 0.266663 37.0482 1.70991 38.3883 4.04949L46.3018 17.8654Z"
-              fill="white"
-            />
-          </svg>
+    <div
+      ref={trackRef}
+      className="absolute right-0 top-0 w-[90px] h-[1117px] flex flex-row justify-end items-start pt-[120px] isolate z-10"
+    >
+      <div
+        className={`flex flex-row justify-end items-center px-0 py-[10px] pl-[10px] w-[90px] h-[100px]
+                    shadow-xl drop-shadow-lg rounded-l-2xl cursor-pointer transition-transform duration-300 ease-in-out`}
+        style={{
+          position: "absolute",
+          top: "120px",
+          right: 0,
+          transform: isHovered ? "translateX(-20px)" : "translateX(0)",
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        onClick={handleIconClick}
+      >
+        <div className="flex flex-row justify-center items-center p-2 w-[80px] h-[80px] rounded-l-[20px] bg-[#FFD7F1]">
+          <div className="w-[64px] h-[64px] flex items-center justify-center">
+            {logoSVG || defaultSVG}
+          </div>
         </div>
       </div>
-
-      {/* Optional Hidden Elements */}
-      <div className="hidden w-[40px] h-[100px] bg-white flex-row items-center gap-[10px] z-[1]" />
-      <div className="hidden absolute w-[24px] h-[24px] top-[4px] left-[4px] bg-[#FFD7F1] rounded-full flex-row items-center p-[4px] gap-[10px] z-[2]" />
     </div>
   );
-};
-
-export default DragTrack;
+}
