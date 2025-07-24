@@ -1,6 +1,7 @@
 import React from 'react';
 import { FiSearch, FiBriefcase, FiMapPin } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 export default function RecruitersPage() {
   const navigate = useNavigate();
 
@@ -11,29 +12,51 @@ export default function RecruitersPage() {
 
 
   return (
-    <div className="min-h-screen bg-white relative isolate">
+    <div className="flex flex-col items-center w-full max-w-[1728px] min-h-screen h-auto xl:h-[7566px] px-5 md:px-10 xl:px-[40px] pt-[140px] gap-[40px] mx-auto bg-white text-[#1B1C1C] font-['Manrope'] z-0">
       {/* Navbar */}
-<header className="fixed top-0 left-0 w-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.3),0px_4px_8px_3px_rgba(0,0,0,0.15)] z-50 px-10 py-4">
-  <div className="max-w-[1440px] mx-auto flex justify-between items-center">
-    <div className="flex items-center gap-6">
-      <h1 className="text-[32px] font-extrabold text-[#A10091] leading-[52px]">JobHunt</h1>
-      <nav className="flex gap-6">
-        <a href="#" className="text-[18px] font-medium text-[#1B1C1E] hover:text-[#AA1299]">Find a Job</a>
-        <a href="#" className="text-[18px] font-medium text-[#1B1C1E] hover:text-[#AA1299]">Find Recruiters</a>
-        <a href="#" className="text-[18px] font-medium text-[#1B1C1E] hover:text-[#AA1299]">CV Builder</a>
-        <a href="#" className="text-[18px] font-medium text-[#1B1C1E] hover:text-[#AA1299]">Job Tracker</a>
-        <a href="#" className="text-[18px] font-medium text-[#1B1C1E] hover:text-[#AA1299]">Extension</a>
-      </nav>
+ <header className="absolute top-0 left-0 w-full h-[100px] flex justify-center items-center px-5 md:px-10 xl:px-[40px] bg-white z-[1] shadow-[0px_1px_3px_rgba(0,0,0,0.3),0px_4px_8px_3px_rgba(0,0,0,0.15)]">
+  <div className="flex flex-row justify-between items-center w-full max-w-[1728px] h-[84px] gap-6 md:gap-10 xl:gap-[40px]">
+
+    {/* Logo */}
+    <div className="flex flex-col justify-center items-start w-auto xl:w-[364px] h-[84px]">
+      <div className="text-[24px] md:text-[28px] xl:text-[32px] leading-[52px] font-extrabold text-[#A10091] font-['Manrope']">
+        JobHunt
+      </div>
     </div>
-    <div className="flex gap-4 items-center">
-      <button className="px-6 py-3 border-2 border-[#1B1C1C] text-[#1B1C1C] text-[18px] font-medium rounded">Login</button>
-      <button className="px-6 py-3 bg-[#1B1C1C] text-white text-[18px] font-medium border-2 border-[#1B1C1C] rounded">Get Started</button>
+
+    {/* Nav Links */}
+    <nav className="hidden lg:flex flex-w justify-center items-center gap-4 md:gap-6 xl:gap-[40px] text-[16px] md:text-[18px] font-['DM_Sans'] tracking-[0.5px]">
+      <Link to="/" className="px-[12px] py-[8px] font-medium text-[#AA1299]">
+        Find a Job
+      </Link>
+      <Link to="/recruiters" className="px-[12px] py-[8px] font-medium text-[#993D6F]">
+        Find Recruiters
+      </Link>
+      <Link to="/cv-builder" className="px-[12px] py-[8px] font-medium text-[#1B1C1E]">
+        CV Builder
+      </Link>
+      <Link to="/job-tracker" className="px-[12px] py-[8px] font-medium text-[#1B1C1E]">
+        Job Tracker
+      </Link>
+      <Link to="/extension" className="px-[12px] py-[8px] font-medium text-[#1B1C1E]">
+        Extension
+      </Link>
+    </nav>
+
+    {/* Action Buttons */}
+    <div className="flex flex-row justify-end items-center gap-2 md:gap-4">
+      <button className="px-[16px] md:px-[24px] py-[10px] md:py-[14px] h-[48px] md:h-[56px] border-[2px] border-[#1B1C1C] rounded bg-white text-[#1B1C1C] text-[16px] md:text-[18px] font-['DM_Sans'] font-medium tracking-[0.5px]">
+        Login
+      </button>
+      <button className="px-[16px] md:px-[24px] py-[10px] md:py-[14px] h-[48px] md:h-[56px] border-[2px] border-[#1B1C1C] rounded bg-[#1B1C1C] text-white text-[16px] md:text-[18px] font-['DM_Sans'] font-medium tracking-[0.5px]">
+        Get Started
+      </button>
     </div>
   </div>
 </header>
 
       {/* Main Background Box */}
-      <main className="pt-40 pb-20 px-6 flex flex-col items-center bg-gradient-to-br from-pink-100 to-pink-300 rounded-2xl mx-auto max-w-[1648px] shadow-md min-h-[850px]">
+      <main className="flex flex-col justify-center items-center py-[104px] isolate mx-auto w-[1648px] h-[859px] bg-gradient-to-br from-[#FFD8E7] to-[#FF7AE5] rounded-[20px]">
 
         {/* Title */}
         <div className="text-center max-w-4xl">
