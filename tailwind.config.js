@@ -20,7 +20,8 @@ export default {
         'success-green': '#77DA9F',
         'off-white': '#F7F2FA',
         'border-gray': '#D9D9D9',
-        'text-dark-pink': '#7C2457'
+        'text-dark-pink': '#7C2457',
+        'custom-gray': '#C8C5CD'
       },
       fontFamily: {
       'Manrope': ['Manrope', 'sans-serif'],
@@ -32,6 +33,6 @@ export default {
 
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp') ],
 }
 

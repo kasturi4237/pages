@@ -1,7 +1,6 @@
 // src/App.jsx
 import React from 'react';
-import { IoLocationOutline, IoCalendarOutline, IoCallOutline, IoMailOutline, IoPencil, IoFlagOutline, IoClose, IoClipboardOutline,  IoPersonCircleOutline } from 'react-icons/io5';
-import { IoPricetagOutline } from "react-icons/io5";
+
 import avatarImg from "../../assets/avatar.png";
 
  
@@ -195,13 +194,13 @@ function Bio() {
 
 
         {/* Key Skills Section */}
-        <div className="box-border flex flex-col items-start p-4 gap-3 w-[384px] h-[224px] border-b border-gray-300 flex-none order-2 self-stretch flex-grow-0">
-          <h3 className="w-[82px] h-7 font-dm-sans font-medium text-lg leading-7 tracking-wider text-pink-700 flex-none order-0 flex-grow-0">
+        <div className="box-border flex flex-col items-start p-4 gap-3 w-[384px] height: auto border-b border-gray-300 flex-none order-2 self-stretch flex-grow-0">
+          <h3 className="w-auto h-7 font-dm-sans font-medium text-lg leading-7 tracking-wider text-[#993D6F] flex-none order-0 flex-grow-0">
             Key Skills
           </h3>
-          <div className="flex flex-row flex-wrap items-start content-start p-0 gap-2 w-[352px] h-[152px] flex-none order-1 self-stretch flex-grow-0">
+          <div className="flex flex-row flex-wrap items-start content-start p-0 gap-2 w-[352px] height: auto flex-none order-1 self-stretch flex-grow-0 ">
             {['Figma', 'UX Research', 'UI/UX', 'Wireframing', 'Prototyping', 'CSS/CSS3', 'HTML/CSS', 'Bootstrap', 'Design Thinking', 'Web Flow', 'Framer', 'Responsive Web Design', 'Website Responsive Design', 'JavaScript', 'User flow', 'UX Design'].map((skill, index) => (
-              <div key={index} className="box-border flex flex-row justify-center items-center p-1 px-3 w-fit h-6 border border-gray-800 rounded-md flex-none order-0 flex-grow-0">
+              <div key={index} className="box-border flex flex-row justify-center items-center p-1 px-3 w-fit py-1 border border-gray-800 rounded-md flex-none order-0 flex-grow-0">
                 <span className="w-auto h-4 font-dm-sans font-bold text-xs leading-4 flex items-center tracking-wider text-gray-800">
                   {skill}
                 </span>
@@ -211,14 +210,14 @@ function Bio() {
         </div>
 
         {/* Roles Section */}
-        <div className="box-border flex flex-col items-start p-4 gap-3 w-[384px] h-24 border-b border-gray-300 flex-none order-3 self-stretch flex-grow-0">
-          <h3 className="w-[47px] h-7 font-dm-sans font-medium text-lg leading-7 tracking-wider text-pink-700 flex-none order-0 flex-grow-0">
+        <div className="box-border flex flex-col items-start p-4 gap-3 w-[384px] height: auto border-b border-[#C8C5CD]flex-none order-3 self-stretch flex-grow-0">
+          <h3 className="w-[47px] h-7 font-dm-sans font-medium text-lg leading-7 tracking-wider text-[#993D6F] flex-none order-0 flex-grow-0">
             Roles
           </h3>
-          <div className="flex flex-row flex-wrap items-start content-start p-0 gap-2 w-[352px] h-6 flex-none order-1 self-stretch flex-grow-0">
+          <div className="flex flex-row flex-wrap items-start content-start p-0 gap-2 w-[352px] h-auto flex-none order-1 self-stretch flex-grow-0">
             {['UI/UX Designer', 'Web Designer', 'Application Designer'].map((role, index) => (
-              <div key={index} className="box-border flex flex-row justify-center items-center p-1 px-3 w-fit h-6 border border-gray-800 rounded-md flex-none order-0 flex-grow-0">
-                <span className="w-auto h-4 font-dm-sans font-bold text-xs leading-4 flex items-center tracking-wider text-gray-800">
+              <div key={index} className="box-border flex flex-row justify-center items-center p-1 px-3 w-fit h-6 border border-[#1B1C1C] rounded-md flex-none order-0 flex-grow-0">
+                <span className="w-auto h-4 font-dm-sans font-bold text-xs leading-4 flex items-center tracking-wider text-[#1B1C1C]">
                   {role}
                 </span>
               </div>
@@ -228,7 +227,7 @@ function Bio() {
 
         {/* Job Type Section */}
         <div className="box-border flex flex-col items-start p-4 gap-3 w-[384px] h-24 border-b border-gray-300 flex-none order-4 self-stretch flex-grow-0">
-          <h3 className="w-[82px] h-7 font-dm-sans font-medium text-lg leading-7 tracking-wider text-pink-700 flex-none order-0 flex-grow-0">
+          <h3 className="w-[82px] h-7 font-dm-sans font-medium text-lg leading-7 tracking-wider text-[#993D6F] flex-none order-0 flex-grow-0">
             Job Type
           </h3>
           <div className="flex flex-row flex-wrap items-start content-start p-0 gap-2 w-[352px] h-6 flex-none order-1 self-stretch flex-grow-0">
@@ -244,7 +243,7 @@ function Bio() {
 
         {/* Work Experience Section */}
         <div className="box-border flex flex-col items-start p-4 gap-3 w-[384px] h-[290px] border-b border-gray-300 flex-none order-5 self-stretch flex-grow-0">
-          <h3 className="w-[151px] h-7 font-dm-sans font-medium text-lg leading-7 tracking-wider text-pink-700 flex-none order-0 flex-grow-0">
+          <h3 className="w-auto h-7 font-dm-sans font-medium text-lg leading-7 tracking-wider text-[#993D6F] flex-none order-0 flex-grow-0">
             Work Experience
           </h3>
           <div className="flex flex-col items-start p-0 gap-1 w-[352px] h-[218px] flex-none order-1 self-stretch flex-grow-0">
@@ -257,11 +256,11 @@ function Bio() {
                 Razorpay
               </p>
               <div className="flex flex-row items-center p-0 gap-1 w-[352px] h-4 flex-none order-2 self-stretch flex-grow-0">
-                <span className="w-[46px] h-4 font-dm-sans font-normal text-xs leading-4 tracking-wider text-gray-500">
+                <span className="w-auto h-4 font-dm-sans font-normal text-xs leading-4 tracking-wider text-gray-500">
                   Full-time
                 </span>
                 <div className="w-px h-3.5 bg-gray-300 rounded-full flex-none order-1 flex-grow-0" />
-                <span className="w-[97px] h-4 font-dm-sans font-normal text-xs leading-4 tracking-wider text-gray-500">
+                <span className="w-auto h-4 font-dm-sans font-normal text-xs leading-4 tracking-wider text-gray-500">
                   Jan 2023 - Present
                 </span>
               </div>
@@ -274,12 +273,12 @@ function Bio() {
               <p className="w-[352px] h-[18px] font-manrope font-light text-sm leading-tight tracking-wider text-black flex-none order-1 self-stretch flex-grow-0">
                 CRED
               </p>
-              <div className="flex flex-row items-center p-0 gap-1 w-[352px] h-4 flex-none order-2 self-stretch flex-grow-0">
+              <div className="flex flex-row items-center p-0 gap-4 w-[352px] h-4 flex-none order-2 self-stretch flex-grow-0">
                 <span className="w-[54px] h-4 font-dm-sans font-normal text-xs leading-4 tracking-wider text-gray-500">
                   Internship
                 </span>
                 <div className="w-px h-3.5 bg-gray-300 rounded-full flex-none order-1 flex-grow-0" />
-                <span className="w-[107px] h-4 font-dm-sans font-normal text-xs leading-4 tracking-wider text-gray-500">
+                <span className="w-auto h-4 font-dm-sans font-normal text-xs leading-4 tracking-wider text-gray-500">
                   Jun 2022 - Dec 2022
                 </span>
               </div>
@@ -292,12 +291,12 @@ function Bio() {
               <p className="w-[352px] h-[18px] font-manrope font-light text-sm leading-tight tracking-wider text-black flex-none order-1 self-stretch flex-grow-0">
                 Obvious Design Studio
               </p>
-              <div className="flex flex-row items-center p-0 gap-1 w-[352px] h-4 flex-none order-2 self-stretch flex-grow-0">
+              <div className="flex flex-row items-center p-0 gap-4 w-[352px] h-4 flex-none order-2 self-stretch flex-grow-0">
                 <span className="w-[51px] h-4 font-dm-sans font-normal text-xs leading-4 tracking-wider text-gray-500">
                   Internship
                 </span>
                 <div className="w-px h-3.5 bg-gray-300 rounded-full flex-none order-1 flex-grow-0" />
-                <span className="w-[107px] h-4 font-dm-sans font-normal text-xs leading-4 tracking-wider text-gray-500">
+                <span className="w-auto h-4 font-dm-sans font-normal text-xs leading-4 tracking-wider text-gray-500">
                   Jan 2022 - May 2022
                 </span>
               </div>
@@ -307,7 +306,7 @@ function Bio() {
 
         {/* Job Locations Section */}
         <div className="box-border flex flex-col items-start p-4 gap-3 w-[384px] h-24 border-b border-gray-300 flex-none order-6 self-stretch flex-grow-0">
-          <h3 className="w-[125px] h-7 font-dm-sans font-medium text-lg leading-7 tracking-wider text-pink-700 flex-none order-0 flex-grow-0">
+          <h3 className="w-auto h-7 font-dm-sans font-medium text-lg leading-7 tracking-wider text-[#993D6F] flex-none order-0 flex-grow-0">
             Job Locations
           </h3>
           <div className="flex flex-row flex-wrap items-start content-start p-0 gap-2 w-[352px] h-6 flex-none order-1 self-stretch flex-grow-0">
@@ -323,7 +322,7 @@ function Bio() {
 
         {/* Salary Expectation Section */}
         <div className="flex flex-col items-start p-4 gap-3 w-[384px] h-[90px] flex-none order-7 self-stretch flex-grow-0">
-          <h3 className="w-[167px] h-7 font-dm-sans font-medium text-lg leading-7 tracking-wider text-pink-700 flex-none order-0 flex-grow-0">
+          <h3 className="w-auto h-7 font-dm-sans font-medium text-lg leading-7 tracking-wider text-[#993D6F] flex-none order-0 flex-grow-0">
             Salary Expectation
           </h3>
           <div className="flex flex-row justify-center items-center p-0 gap-0.5 w-[107px] h-[18px] flex-none order-1 flex-grow-0">

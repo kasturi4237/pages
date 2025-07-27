@@ -5,7 +5,8 @@ import RecruitersPage from './components/RecruitersPage';
 import FindRecruiters from './components/FindRecruiters';
 import ExtensionPage from './pages/ExtensionPage';
 import ExtensionTutorialModal from './components/Extension/ExtensionTutorialModal'; // ✅ import
-
+import JobCardDetail from './components/recruiters/JobCardDetail';
+import JobCard from './components/recruiters/JobCard';
 function ModalWrapper() {
   const location = useLocation();
   const [showTutorial, setShowTutorial] = useState(false);
@@ -43,6 +44,7 @@ function App() {
         <Route path="/recruiters" element={<RecruitersPage />} />
         <Route path="/find-recruiters" element={<FindRecruiters />} />
         <Route path="/extension" element={<ExtensionPage />} />
+        <Route path="/jobcardDetail" element={<JobCardDetail />} />
       </Routes>
     </Router>
   );

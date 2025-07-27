@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import ExtensionSidebar from "./ExtensionSidebar";
 import DragTrack from "./DragTrack";
 import KeywordMatchPanel from "./KeywordMatchPanel";
-import Bio from "./Bio"
+import ProfileCard from "./ProfileCard";
+import Bio from "./Bio";
 const ExtensionTutorialModal = ({ show, onClose }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [modalStyle, setModalStyle] = useState({});
