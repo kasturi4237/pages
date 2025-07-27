@@ -1,7 +1,9 @@
 // src/components/JobCard.jsx
-import React from 'react';
+import React, { useState } from 'react';
+import JobCardDetailModal from './JobCardDetailModal';
 
 function JobCard({ company, title, bgColor }) {
+   const [showModal, setShowModal] = useState(false);
   return (
     <div className="flex flex-col items-center p-2 pb-6 gap-6 w-[394px] h-[202px] bg-white shadow-md rounded-[32px]">
       {/* Frame 473 */}
@@ -73,9 +75,14 @@ function JobCard({ company, title, bgColor }) {
         </div>
 
         {/* Button */}
-        <button className="flex flex-row justify-center items-center px-4 py-1.5 gap-2 w-[114px] h-9 bg-black border-2 border-black rounded-md text-white font-['DM_Sans'] font-medium text-base leading-6 tracking-wider">
-          Button
+        <div className="relative">
+
+        <button onClick={() => setShowModal(true)}
+        className="flex flex-row justify-center items-center px-4 py-1.5 gap-2 w-[114px] h-9 bg-black border-2 border-black rounded-md text-white font-['DM_Sans'] font-medium text-base leading-6 tracking-wider">
+          View More
         </button>
+        {showModal && <JobCardDetailModal onClose={() => setShowModal(false)} />}
+    </div>
       </div>
     </div>
   );
