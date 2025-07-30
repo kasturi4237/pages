@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import HomePage from './components/HomePage';
-import RecruitersPage from './components/RecruitersPage';
-import FindRecruiters from './components/FindRecruiters';
+import HomePage from './pages/HomePage';
+import RecruitersPage from './pages/RecruitersPage';
+import FindRecruiters from './pages/FindRecruiters';
 import ExtensionPage from './pages/ExtensionPage';
 import ExtensionTutorialModal from './components/Extension/ExtensionTutorialModal'; // ✅ import
 import JobCardDetail from './components/recruiters/JobCardDetail';
