@@ -3,6 +3,7 @@ import React from 'react';
 import { FiSearch, FiMapPin } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import heroPattern from '../assets/hero-pattern.svg'; 
+import analytics  from '../assets/analytics.png';
 export default function HomePage() {
   const jobCategories = [
     'UI/UX Design', 'Sales', 'Development', 'Analytics',
@@ -390,7 +391,7 @@ export default function HomePage() {
 
           
     {/* Features Section */}
-<section className="flex flex-col items-center w-[1728px] h-[3830px] pt-[80px] bg-white">
+<section className=" flex flex-col items-center w-[1728px] h-[3830px] pt-[80px] bg-white">
 
   <h3 className="w-[1728px] h-[38px] text-[24px] leading-[38px] font-bold text-[#AA1299] text-center font-[Manrope]">
   HOW ARE WE BETTER
@@ -402,9 +403,18 @@ export default function HomePage() {
   How We Help Elevate Your Career
 </h2>
 
-  <div className="flex flex-col items-start gap-[256px] w-[1252px] h-[3524px] isolate">
+
+  <div className=" flex flex-col items-start gap-[256px] w-[1252px] h-[3524px] isolate relative">
+
+    {/* Vertical Lines */}
+          <div className="absolute top-[540px] left-1/2 transform -translate-x-1/2 w-[2px] h-[250px] bg-[#E2E2E2] z-0" />
+          <div className="absolute top-[1296px] left-1/2 transform -translate-x-1/2 w-[2px] h-[250px] bg-[#E2E2E2] z-1" />
+          <div className="absolute top-[2052px] left-1/2 transform -translate-x-1/2 w-[2px] h-[250px] bg-[#E2E2E2] z-2" />
+          <div className="absolute top-[2808px] left-1/2 transform -translate-x-1/2 w-[2px] h-[250px] bg-[#E2E2E2] z-3" />
+
+    
     {/* FRAME  467*/}
-  <div className="flex justify-center items-center gap-[64px] w-full max-w-[1252px] h-[500px] relative z-[4]">
+  <div className=" relative flex justify-center items-center gap-[64px] w-full max-w-[1252px] h-[500px] relative z-[4]">
   {/* Left Image Box */}
   <div className="w-[500px] h-[500px]  rounded-xl relative">
     
@@ -600,8 +610,8 @@ export default function HomePage() {
 </div>
 
 </div>
-    {/* Vertical Separator */}
-<div className="absolute w-[2px] h-[250px] left-[573px] top-[540px] bg-[#E2E2E2] z-0" />
+   
+
 
 
 
@@ -1475,8 +1485,7 @@ export default function HomePage() {
 
 
 
-{/* Vertical Separator */}
-<div className="absolute w-[2px] h-[250px] left-[573px] top-[540px] bg-[#E2E2E2] z-0" />
+
 
 
 {/*FRAME   469   */}
@@ -1485,12 +1494,12 @@ export default function HomePage() {
   {/* Left Image */}
   <div className="w-[500px] h-[500px]  rounded-xl relative">
     
-   
-
-
+   <img
+    src="src/assets/analytics.png"
+    alt="analytics image"
+     className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1728px] h-[410px] z-0"
+  />
 </div>
-
-
   {/* Right Content Block */}
   <div className="flex flex-col justify-center items-start gap-[8px] py-[40px] w-[688px] h-[312px]">
     {/* Icon Circle */}
@@ -1513,15 +1522,18 @@ export default function HomePage() {
     </p>
   </div>
 </div>
-
-
 {/*FRAME 470 */}
 
 {/* Frame 470 */}
-<div className="flex flex-row justify-center items-center gap-[64px] w-[1252px] h-[500px] z-[7]">
-  <div className="w-[500px] h-[400px] bg-[#F5F5F5] rounded-[24px] shadow-md flex items-center justify-center">
-    
-    
+<div className="flex flex-row justify-center items-center gap-[64px] w-full max-w-[1252px] h-[500px] relative z-[7]">
+  <div className="w-[500px] h-[400px] rounded-xl relative ">
+    <img
+    src="src\assets\image23.png"
+    alt="build resume image"
+     className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1728px] h-[410px] z-0"
+  />
+
+      
   </div>
 
   {/* RIGHT Content Block */}
@@ -1554,6 +1566,9 @@ export default function HomePage() {
   
 </div>
 
+
+
+{/* Frame 471 */}
 <div className="flex justify-center items-center gap-[64px] w-full max-w-[1252px] h-[500px] relative z-[8]">
   {/* Left Illustration Box */}
   <div className="w-[500px] h-[500px] rounded-xl relative">
@@ -1718,20 +1733,7 @@ export default function HomePage() {
 
 
 
-
-
-
-
-
-
-
 </div>
-
-
-
-
-
-
 
 </section>
 
@@ -1835,6 +1837,8 @@ export default function HomePage() {
         </div>
       </section>
 
+
+
       {/* Footer */}
       <footer className="flex flex-col items-center w-[1728px] h-[492px] px-[144px] bg-white mt-20">
         <div className="flex flex-col items-center px-[40px] pt-[40px] w-[1440px] h-[492px]">
@@ -1842,9 +1846,9 @@ export default function HomePage() {
             {/* Left Info */}
             <div className="flex flex-col items-start w-[368px] h-[192px]">
               {/* JobHunt TEXT */}
-              <div className="w-[169px] h-[64px] text-[40px] leading-[64px] font-extrabold font-manrope text-[#A10091] flex items-center">
-  JobHunt
-</div>
+              <div className="w-[169px] h-[64px] text-[40px] leading-[64px] font-extrabold font-manrope text-[#A10091] flex items-center">JobHunt</div>
+  
+
 
                {/* SPACER */}
               <div className="w-[368px] h-2 flex-none order-1 self-stretch " />
@@ -1925,22 +1929,42 @@ export default function HomePage() {
 
             {/* Company */}
             <div className="flex flex-col items-start w-[217px] h-[296px] px-[16px]">
-              <h3 className="text-[40px] leading-[64px] font-bold font-['Manrope'] text-[#1B1C1C]">Company</h3>
-              <div className=" w-[143px] h-4 bg-red-200" />
+            {/* Heading */}
+           <h3 className="w-[185px] h-[64px] font-manrope font-bold text-[40px] leading-[64px] text-[#1B1C1C] flex items-center">
+             Company </h3>
+ 
 
-              {/* {["About", "Job Tracker", "Get In Touch", "Privacy Policies", "Terms & Conditions"].map((label, i) => (
-                <div key={i} className="w-[185px] h-[40px] bg-white rounded flex items-center px-[16px] mb-1">
-                  <span className="text-[#993D6F] font-['DM_Sans'] text-[16px] tracking-wide">{label}</span>
-                </div>
-              ))} */}
-            </div>
+          {/* Spacer */}
+          <div className="w-[185px] h-[16px]" />
+
+          {/* Footer Links */}
+          {[
+            "Resume Templates",
+            "About",
+            "Get In Touch",
+            "Privacy Policies",
+            "Terms & Conditions",
+            ].map((label, index) => (
+            <React.Fragment key={index}>
+            <div className="flex items-center w-[185px] h-[40px] bg-white rounded-[4px] px-[16px]">
+            <span className="w-auto h-[24px] text-[#993D6F] font-dmsans text-[16px] leading-[24px] tracking-[0.25px] flex items-center">
+          {label}
+        </span>
+      </div>
+      {/* Spacer below each item except the last one */}
+      {index < 4 && <div className="w-[185px] h-[4px]" />}
+    </React.Fragment>
+  ))}
+</div>
+
           </div>
 
           {/* Footer Bottom */}
-          <div className="flex justify-center items-center w-[1360px] h-[76px] border-t border-[#78767D] mt-4">
-            <p className="text-[18px] font-medium font-['DM_Sans'] text-black tracking-wide">
-              © 2025. JobHunt Inc. • All Rights Reserved
-            </p>
+          <div className="flex justify-center items-center w-[1360px] h-[76px] border-t border-[#78767D] px-[40px] py-[24px]">
+            <p className="text-[18px] font-medium font-['DM_Sans'] text-black leading-[28px] tracking-[0.5px]">
+            © 2025. JobHunt Inc. • All Rights Reserved
+           </p>
+
           </div>
         </div>
       </footer>
