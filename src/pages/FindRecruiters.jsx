@@ -21,26 +21,8 @@ const jobData = [
   
 ];
 const FindRecruiters = () => {
-  // const [recruiters, setRecruiters] = useState([]);
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   fetch('http://localhost:5000/api/scrapeRecruiters')
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       if (Array.isArray(data)) {
-  //         setRecruiters(data);
-  //       } else {
-  //         setRecruiters([]);
-  //       }
-  //       setLoading(false);
-  //     })
-  //     .catch(() => {
-  //       setRecruiters([]);
-  //       setLoading(false);
-  //     });
-  // }, []);
-
+  
+ 
   return (
     <>
     
