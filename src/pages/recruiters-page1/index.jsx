@@ -24,31 +24,50 @@ export default function RecruitersPage() {
 
 
   return (
-        <div
-         className="
-         flex flex-col items-center
-         w-full
-          bg-white text-[#1B1C1C] font-['Manrope'] isolation-isolate z-0
+    <div
+  className="
+    flex flex-col items-center
+    w-full
+    bg-white text-[#1B1C1C] font-['Manrope']
+    isolation-isolate z-0
 
-         /* Mobile (default) */
-         px-0 pb-8  /* padding: 0px 0px 32px */
-         max-w-[440px] h-[840px]
+    /* Mobile */
+    px-4 pb-8 gap-4 min-h-screen
 
-          /* Desktop (xl) */
-          xl:max-w-[1728px] xl:h-[1117px] xl:gap-[10px] xl:mx-auto xl:pb-0 ">
+    /* Tablet */
+    sm:px-6 sm:pb-10 sm:gap-6
+
+    /* Medium / small laptops */
+    md:px-8 md:pb-12 md:gap-8
+
+    /* Large desktop */
+    lg:px-12 lg:pb-14 lg:gap-10
+
+    /* Extra large */
+    xl:max-w-[1728px] xl:mx-auto xl:pb-16
+  "
+>
             {/* Navbar */}
   
 <nav
   className="
-    flex flex-col items-center gap-6 px-6 py-2
-    absolute left-0 top-0 w-[440px] h-[56px]
+    absolute left-0 top-0
+    w-full min-h-[56px]
+    flex flex-col items-center justify center gap-4
+    px-4 py-2
     bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.3),0px_4px_8px_3px_rgba(0,0,0,0.15)]
     z-[1]
 
-    /* Desktop overrides */
-    xl:flex-row xl:justify-center xl:items-center xl:gap-10 xl:px-10 xl:py-2
-    xl:w-full xl:h-[100px]  ">
+    /* Tablet */
+    sm:flex-row sm:justify-between sm:px-6 sm:gap-6
 
+    /* Desktop */
+    lg:justify-center lg:gap-8
+
+    /* Extra large desktop */
+    xl:gap-10 xl:px-10 xl:h-[100px]
+  "
+>
 
    <div className="flex items-center justify-between w-full max-w-[1728px] h-full">
  

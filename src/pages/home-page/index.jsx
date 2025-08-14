@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import heroPattern from '../../assets/hero-pattern.svg';
 ; 
 import analytics  from '../../assets/analytics.png';
-import Navbar from '../../components/Navbar';
+import Navbar_home from '../../components/Navbar_home';
 export default function HomePage() {
   const jobCategories = [
     'UI/UX Design', 'Sales', 'Development', 'Analytics',
@@ -41,7 +41,7 @@ export default function HomePage() {
     
       {/* Header */}
       
-    <Navbar />
+    <Navbar_home />
 
 
 
