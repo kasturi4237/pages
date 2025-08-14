@@ -2,14 +2,16 @@
 import React, { useState } from "react";
 
 
-import Hero from '../components/Extension/Hero';
-import Benefits from '../components/Extension/Benefits';
-import HowItWorks from '../components/Extension/HowItWorks';
-import FAQs from '../components/Extension/FAQs';
-import ExtensionCTA from '../components/Extension/ExtensionCTA';
-import Navbar from '../components/Extension/Navbar';
-import Footer from '../components/Extension/Footer';
-import ExtensionTutorialModal from '../components/Extension/extensionModalComponents/ExtensionTutorialModal';
+import Hero from './components/Hero';
+import Benefits from "./components/Benefits";
+import HowItWorks from "./components/HowItWorks";
+import FAQs from './components/FAQs';
+import ExtensionCTA from './components/ExtensionCTA';
+import ExtensionTutorialModal from './components/extensionModalComponents/ExtensionTutorialModal';
+
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+
 
 const ExtensionPage = () => {
   const [showTutorial, setShowTutorial] = useState(true);

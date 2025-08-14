@@ -1,7 +1,9 @@
 // src/App.jsx
 import React from 'react';
 
-import avatarImg from "../../../assets/avatar.png";
+import avatarImg from '../../../../assets/avatar.png';
+
+
 
 
  

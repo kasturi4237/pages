@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import avatar from '../assets/avatar.png';
+import avatar from '../../assets/avatar.png';
 
 export default function RecruitersPage() {
   const navigate = useNavigate();

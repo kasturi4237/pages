@@ -1,7 +1,7 @@
 // src/components/JobCard.jsx
 import React, { useState } from 'react';
 import JobCardDetailModal from './JobCardDetailModal';
-import frameImage from "../../assets/frame-929.png";
+import frameImage from "../../../assets/frame-929.png";
 
 function JobCard({ company, title, bgColor }) {
    const [showModal, setShowModal] = useState(false);

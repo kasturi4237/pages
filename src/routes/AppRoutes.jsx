@@ -2,11 +2,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import HomePage from "../pages/HomePage";
-import RecruitersPage from "../pages/RecruitersPage";
-import FindRecruiters from "../pages/FindRecruiters";
-import ExtensionPage from "../pages/ExtensionPage";
-import JobCardDetail from "../components/recruiters/JobCardDetail";
+import HomePage from "../pages/home-page";
+
+import RecruitersPage from "../pages/recruiters-page1";
+import FindRecruiters from "../pages/recruiters-page2";
+import ExtensionPage from "../pages/extension-page";
+
+import JobCardDetail from "../pages/recruiters-page2/components/JobCardDetail";
 
 export default function AppRoutes() {
   return (

@@ -1,10 +1,11 @@
 // Complete homepage matching the provided layout and Figma CSS
 import React from 'react';
-import { FiSearch, FiMapPin } from 'react-icons/fi';
+
 import { Link } from 'react-router-dom';
-import heroPattern from '../assets/hero-pattern.svg'; 
-import analytics  from '../assets/analytics.png';
-import Navbar from "../components/Extension/Navbar";
+import heroPattern from '../../assets/hero-pattern.svg';
+; 
+import analytics  from '../../assets/analytics.png';
+import Navbar from '../../components/Navbar';
 export default function HomePage() {
   const jobCategories = [
     'UI/UX Design', 'Sales', 'Development', 'Analytics',
@@ -136,7 +137,10 @@ export default function HomePage() {
 
 
       <div className="flex items-center gap-2 w-full lg:w-[443px]">
-        <FiSearch className="text-[#47464C] w-6 h-6" />
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28 28L20 20M4 13.3333C4 14.559 4.24141 15.7727 4.71046 16.905C5.1795 18.0374 5.86699 19.0663 6.73367 19.933C7.60035 20.7997 8.62925 21.4872 9.76162 21.9562C10.894 22.4253 12.1077 22.6667 13.3333 22.6667C14.559 22.6667 15.7727 22.4253 16.905 21.9562C18.0374 21.4872 19.0663 20.7997 19.933 19.933C20.7997 19.0663 21.4872 18.0374 21.9562 16.905C22.4253 15.7727 22.6667 14.559 22.6667 13.3333C22.6667 12.1077 22.4253 10.894 21.9562 9.76162C21.4872 8.62925 20.7997 7.60035 19.933 6.73367C19.0663 5.86699 18.0374 5.1795 16.905 4.71046C15.7727 4.24141 14.559 4 13.3333 4C12.1077 4 10.894 4.24141 9.76162 4.71046C8.62925 5.1795 7.60035 5.86699 6.73367 6.73367C5.86699 7.60035 5.1795 8.62925 4.71046 9.76162C4.24141 10.894 4 12.1077 4 13.3333Z" stroke="#47464C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
         <input
           type="text"
           placeholder="Search by job title, keyword or company"
@@ -147,7 +151,10 @@ export default function HomePage() {
       <div className="hidden lg:block w-[2px] h-[32px] bg-[#C8C5CD] rounded-full" />
 
       <div className="flex items-center gap-2 w-full lg:w-[443px]">
-        <FiMapPin className="text-[#47464C] w-6 h-6" />
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.6667 24.0002L12 22.6668M12 22.6668L4 26.6668V9.3335L12 5.3335M12 22.6668V5.3335M12 5.3335L20 9.3335M20 9.3335L28 5.3335V15.3335M20 9.3335V16.0002M26.9336 26.9335L29.3336 29.3335M20 24.0002C20 25.061 20.4214 26.0784 21.1716 26.8286C21.9217 27.5787 22.9391 28.0002 24 28.0002C25.0609 28.0002 26.0783 27.5787 26.8284 26.8286C27.5786 26.0784 28 25.061 28 24.0002C28 22.9393 27.5786 21.9219 26.8284 21.1717C26.0783 20.4216 25.0609 20.0002 24 20.0002C22.9391 20.0002 21.9217 20.4216 21.1716 21.1717C20.4214 21.9219 20 22.9393 20 24.0002Z" stroke="#47464C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
         <input
           type="text"
           placeholder="Enter city, state, zip or remote"

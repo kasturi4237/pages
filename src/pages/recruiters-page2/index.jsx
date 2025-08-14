@@ -3,10 +3,12 @@
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-import avatar from '../assets/avatar.png';
-import Pagination from '../components/recruiters/Pagination';
-import JobCard from '../components/recruiters/JobCard';
-import JobCardDetail from '../components/recruiters/JobCardDetail';
+import avatar from '../../assets/avatar.png';
+
+import JobCard from './components/JobCard';
+import JobCardDetail from './components/JobCardDetail';
+import Pagination from './components/Pagination';
+
 const jobData = [
   { company: 'Amazon', title: 'Arun Joshi', bgColor: '#E6F2FF' },
   { company: 'Amazon', title: 'Arun Joshi',  bgColor: '#E6F5E6' },
