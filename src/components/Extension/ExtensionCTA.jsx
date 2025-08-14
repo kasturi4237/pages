@@ -1,28 +1,18 @@
 // src/components/Extension/ExtensionCTA.jsx
 import React from 'react';
 
+
+
+
 const ExtensionCTA = () => {
   return (
     <section className="relative w-[1648px] h-[544px] rounded-[40px] overflow-hidden px-[80px] py-[96px] flex flex-col gap-[161px] bg-gradient-to-br from-[#FFD8E7] to-[#FF7AE5] isolation-isolate">
       {/* Background Vectors */}
-      <div className="absolute inset-0 z-0">
-        {[...Array(30)].map((_, i) => {
-          const top = 60 - i * 2;
-          const height = 596 - i * 10;
-          return (
-            <div
-              key={i}
-              className="absolute border border-white"
-              style={{
-                width: '1732px',
-                height: `${height}px`,
-                left: 'calc(50% - 866px - 42px)',
-                top: `${top}px`,
-              }}
-            />
-          );
-        })}
-      </div>
+       <img
+    src="src/assets/hero-pattern.svg"
+    alt="Hero Background Pattern"
+     className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1728px] h-[410px] z-0"
+  />
 
       {/* CTA Content */}
       <div className="relative z-10 flex flex-col w-[880px] h-[352px] gap-[40px]">

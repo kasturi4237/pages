@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+
 
 const faqs = [
   {
@@ -49,9 +49,10 @@ export default function FAQsSection() {
               <span className="text-[24px] leading-[38px] font-bold text-[#1B1C1C] text-left">
                 {item.question}
               </span>
-              <span className="text-black">
-                {activeIndex === index ? <ChevronUp size={40} /> : <ChevronDown size={40} />}
-              </span>
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 25L20 15L30 25" stroke="#1B1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
             </button>
             {activeIndex === index && item.answer && (
               <div className="px-6 pb-6">

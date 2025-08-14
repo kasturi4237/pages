@@ -1,7 +1,7 @@
 // src/pages/ExtensionPage.jsx
 import React, { useState } from "react";
 
-// ✅ All imports at the top
+
 import Hero from '../components/Extension/Hero';
 import Benefits from '../components/Extension/Benefits';
 import HowItWorks from '../components/Extension/HowItWorks';
@@ -9,7 +9,7 @@ import FAQs from '../components/Extension/FAQs';
 import ExtensionCTA from '../components/Extension/ExtensionCTA';
 import Navbar from '../components/Extension/Navbar';
 import Footer from '../components/Extension/Footer';
-import ExtensionTutorialModal from '../components/Extension/ExtensionTutorialModal'; // ✅ fix path if needed
+import ExtensionTutorialModal from '../components/Extension/extensionModalComponents/ExtensionTutorialModal';
 
 const ExtensionPage = () => {
   const [showTutorial, setShowTutorial] = useState(true);
@@ -24,7 +24,7 @@ const ExtensionPage = () => {
       <ExtensionCTA />
       <Footer />
       
-      {/* ✅ Modal at the end */}
+      
       <ExtensionTutorialModal
         show={showTutorial}
         onClose={() => setShowTutorial(false)}

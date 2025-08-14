@@ -3,7 +3,14 @@ import React from 'react';
 
 function Pagination() {
   return (
-    <div className="flex flex-row justify-center items-center py-2.5 px-6 gap-6 w-[1230px] h-[76px] self-stretch">
+    <div
+  className="
+    flex flex-row justify-center items-center
+    px-6 py-2.5 gap-6
+    w-[440px] md:w-[1230px] 
+    h-[76px]
+  "
+>
       {/* Previous Button */}
       <button className="flex flex-row justify-center items-center p-4 gap-2 w-14 h-14 bg-[#E3E2E2] border-2 border-[#E3E2E2] rounded-full">
         <svg

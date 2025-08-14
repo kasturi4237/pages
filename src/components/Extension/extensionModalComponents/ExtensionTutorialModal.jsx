@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import ExtensionSidebar from "./ExtensionSidebar";
 import DragTrack from "./DragTrack";
 import KeywordMatchPanel from "./KeywordMatchPanel";
-import ProfileCard from "./ProfileCard";
+
 import Bio from "./Bio";
 const ExtensionTutorialModal = ({ show, onClose }) => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -15,14 +15,14 @@ const ExtensionTutorialModal = ({ show, onClose }) => {
       content:
         "Autofill pulls from your profile. Note: Gray icons indicate unsupported jobs.",
       position: {
-    top: "135px",        // ← change this line
+    top: "135px",      
     right: "160px"
   }
     },
     {
       content: "Click on AUTOFILL to see the extension in action.",
       position: {
-        top: "135px",        // ← change this line
+        top: "135px",        
         right: "460px"
       },
     },
@@ -49,7 +49,7 @@ const ExtensionTutorialModal = ({ show, onClose }) => {
       content:
         "Spot missing keywords instantly and add them to your resume with one click!",
       position: {
-        top: "135px",        // ← change this line
+        top: "135px",       
         right: "460px"
       },
     },
@@ -58,7 +58,7 @@ const ExtensionTutorialModal = ({ show, onClose }) => {
       content:
         "Seamlessly copy your details and paste them into any application.",
       position: {
-        top: "135px",        // ← change this line
+        top: "135px",        
         right: "460px"
       },
     },
