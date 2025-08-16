@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 
-const JobCardDetail = ({ onClose }) => {
+const JobCardDetail = ({ onClose, bgColor = '#E6F2FF' }) => {
   return (
-    <div className="flex flex-col items-center p-2 pb-6 gap-6 w-[394px] h-[326px] bg-white shadow-[0px_1px_2px_rgba(0,0,0,0.3),0px_1px_3px_1px_rgba(0,0,0,0.15)] rounded-[32px]">
+    <div className="flex flex-col items-center p-2 pb-6 gap-6 w-full max-w-[394px] h-auto bg-white shadow-[0px_1px_2px_rgba(0,0,0,0.3),0px_1px_3px_1px_rgba(0,0,0,0.15)] rounded-[32px]">
       {/* Card Top Section */}
-      <div className="flex flex-col items-center p-6 gap-6 w-[378px] h-[214px] bg-[#E6F2FF] rounded-[24px]">
+      <div className="flex flex-col items-center p-6 gap-6 w-full h-auto rounded-[24px]" style={{ backgroundColor: bgColor }}>
         {/* Header Row */}
-        <div className="flex flex-row justify-center items-start gap-2 w-[330px] h-[62px]">
+        <div className="flex flex-row justify-center items-start gap-2 w-full h-[62px]">
           {/* Company Logo */}
           <div className="flex justify-center items-center p-2 w-14 h-14 bg-white rounded">
             <img
@@ -18,7 +18,7 @@ const JobCardDetail = ({ onClose }) => {
           </div>
 
           {/* Text Block */}
-          <div className="flex flex-col items-start w-[250px] h-[62px]">
+          <div className="flex flex-col items-start w-full h-[62px]">
             <div className="font-['DM_Sans'] text-[16px] font-medium leading-6 text-black">
               Amazon
             </div>
@@ -29,7 +29,7 @@ const JobCardDetail = ({ onClose }) => {
         </div>
 
         {/* Contact Rows */}
-        <div className="flex flex-col items-start gap-2 w-[330px] h-[80px]">
+        <div className="flex flex-col items-start gap-2 w-full h-auto">
           {/* Email Row */}
           <div className="flex flex-row items-center gap-2 w-full h-9">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +65,7 @@ const JobCardDetail = ({ onClose }) => {
       </div>
 
       {/* CTA Buttons */}
-      <div className="flex flex-row justify-between items-center px-4 gap-6 w-[378px] h-14">
+      <div className="flex flex-row justify-between items-center px-4 gap-6 w-full h-14">
         {/* Close Button */}
         <button onClick={onClose}
         className="flex justify-center items-center px-6 py-3 w-[98px] h-14 bg-white border-2 border-[#B75589] rounded">

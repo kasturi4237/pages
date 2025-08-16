@@ -7,25 +7,23 @@ function JobCard({ company, title, bgColor }) {
    const [showModal, setShowModal] = useState(false);
   return (
     <div
-  className="hidden 
-    md:flex flex-col items-center
+  className="
+    flex flex-col items-center
     px-2 pt-2 pb-6
     gap-6
-    w-[394px] h-[202px]
+    w-full max-w-[394px] h-auto
     bg-white
     shadow-[0px_1px_2px_rgba(0,0,0,0.3),0px_1px_3px_1px_rgba(0,0,0,0.15)]
-    rounded-[32px]
+    rounded-[32px] overflow-hidden
   "
 >
       {/* Frame 473 */}
       <div
-        className="flex flex-col items-center p-6 gap-6 w-[378px] h-[110px] rounded-[24px]"
+        className="flex flex-col items-center p-6 gap-6 w-full h-auto rounded-[24px]"
         style={{ backgroundColor: bgColor }}
       >
         {/* Frame 479 */}
-        <div className="flex flex-row justify-center items-start p-0 gap-2 w-[330px] h-[62px] sm:w-[330px] sm:h-[62px]
-    md:w-[300px] md:h-[60px]
-    lg:w-[330px] lg:h-[62px] self-stretch">
+        <div className="flex flex-row justify-center items-start p-0 gap-2 w-full h-[62px] self-stretch">
           {/* Company Logo Icon - assuming Google logo is used for all */}
           <div className="flex flex-row justify-center items-center p-2 w-14 h-14 bg-white rounded-md">
             {/* Frame 929 - Google Logo SVG */}
@@ -37,13 +35,13 @@ function JobCard({ company, title, bgColor }) {
           </div>
 
           {/* Frame 486 */}
-          <div className="flex flex-col items-start p-0 w-[250px] h-[62px] flex-grow">
+          <div className="flex flex-col items-start p-0 w-full h-[62px] flex-grow">
             {/* Company Name */}
-            <p className="w-[250px] h-6 font-['DM_Sans'] font-medium text-base leading-6 tracking-wider text-black">
+            <p className="w-full h-6 font-['DM_Sans'] font-medium text-base leading-6 tracking-wider text-black">
               {company}
             </p>
             {/* Job Title */}
-            <h6 className="w-[250px] h-[38px] font-['Manrope'] font-bold text-2xl leading-tight text-black">
+            <h6 className="w-full h-[38px] font-['Manrope'] font-bold text-2xl leading-tight text-black">
               {title}
             </h6>
           </div>
@@ -51,9 +49,9 @@ function JobCard({ company, title, bgColor }) {
       </div>
 
       {/* Frame 476 - Salary and Apply Button */}
-      <div className="flex flex-row items-center px-4 gap-6 w-[378px] h-9 self-stretch">
-        {/* Frame 661 - Salary */}
-        <div className="flex flex-row items-center p-0 gap-2 w-[208px] h-9 self-stretch flex-grow">
+      <div className="flex flex-row items-center px-4 gap-6 w-full h-9 self-stretch">
+        {/* Frame 661 - email */}
+        <div className="hidden xl:flex  flex-row items-center p-0 gap-2 w-[208px] h-9 self-stretch flex-grow">
           {/* Icon (Mail icon) */}
           <div className="flex flex-row justify-center items-center p-0 w-6 h-6">
             <svg
@@ -81,7 +79,7 @@ function JobCard({ company, title, bgColor }) {
               />
             </svg>
           </div>
-          {/* Monthly text */}
+          {/* email text */}
           <p className="w-32 h-6 font-['DM_Sans'] font-normal text-base leading-6 tracking-wider text-black">
            arun@gmail.com
           </p>

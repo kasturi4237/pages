@@ -5,22 +5,20 @@ import React from 'react';
 export default function Footer() {
   return (
     
-     <footer className="w-full flex flex-col items-center bg-white mt-20">
-      <div className="w-full lg:w-[1728px] flex flex-col items-center px-6 lg:px-[144px] py-[24px] lg:py-[80px]">
-        {/* Main Content Wrapper */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-[64px] w-full lg:w-[1360px] h-auto lg:h-[376px]">
-          {/* Left Info Column */}
-          <div className="flex flex-col items-center lg:items-start w-full lg:w-[368px] h-auto lg:h-[192px] text-center lg:text-left">
-            {/* JobHunt Logo */}
-            <div className="text-[40px] leading-[64px] font-extrabold font-manrope text-[#A10091]">JobHunt</div>
-            {/* Spacer */}
-            <div className="w-full h-2" />
-            {/* Tagline */}
-            <p className="w-full text-[#1B1C1C] text-[16px] leading-[24px] font-dmsans font-light tracking-[0.25px]">
-              Connecting skilled professionals with the right opportunities in a smarter, faster way.
-            </p>
-            {/* Spacer */}
-            <div className="w-full h-6" />
+    <footer className="w-full flex flex-col items-center bg-white mt-20">
+  <div className="w-full max-w-screen-2xl flex flex-col items-center px-6 lg:px-20 py-8 lg:py-20">
+    {/* Main Content Wrapper */}
+    <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-16 w-full">
+      
+      {/* Left Info Column */}
+      <div className="flex flex-col items-center lg:items-start w-full lg:w-1/3 text-center lg:text-left">
+        <h2 className="text-[32px] lg:text-[40px] font-extrabold font-manrope text-[#A10091]">
+          JobHunt
+        </h2>
+        <p className="mt-2 text-[#1B1C1C] text-sm lg:text-base font-dmsans font-light tracking-wide">
+          Connecting skilled professionals with the right opportunities in a smarter, faster way.
+        </p>
+        <div className="flex gap-4 mt-4 justify-center lg:justify-start">
             {/* Social Icons */}
             <div className="flex flex-row gap-4 w-full justify-center lg:justify-start">
               {/* Facebook */}
@@ -62,46 +60,44 @@ export default function Footer() {
               </div>
             </div>
           </div>
+          </div>
 
           {/* Desktop-only spacer */}
-          <div className="hidden lg:block w-[383px] h-[200px]" />
+          <div className="hidden lg:block w-[383px]" />
 
-          {/* Services Column */}
-          <div className="flex flex-col items-center lg:items-start w-full lg:w-[200px] h-auto lg:h-[208px] text-center lg:text-left">
-            <h3 className="text-[28px] lg:text-[40px] font-bold font-manrope text-[#1B1C1C]">Services</h3>
-            <div className="h-4" />
-            {["Who’s Hiring", "Resume Templates", "Resume Builder"].map((label, i) => (
-              <div key={i} className="w-full lg:w-[168px] h-[40px] flex justify-center lg:justify-start items-center mb-1">
-                <span className="text-[#993D6F] font-dmsans text-[16px] tracking-wide">{label}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Company Column */}
-          <div className="flex flex-col items-center lg:items-start w-full lg:w-[217px] h-auto lg:h-[296px] text-center lg:text-left">
-            <h3 className="w-full lg:w-[185px] text-[28px] lg:text-[40px] font-bold font-manrope text-[#1B1C1C]">Company</h3>
-            {/* Spacer */}
-            <div className="w-full h-4" />
-            {[
-              "About",
-              "Get In Touch",
-              "Privacy Policies",
-              "Terms & Conditions",
-            ].map((label, index) => (
-              <div key={index} className="w-full lg:w-[185px] h-[40px] flex justify-center lg:justify-start items-center mb-1">
-                <span className="text-[#993D6F] font-dmsans text-[16px] tracking-wide">{label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Footer Bottom */}
-        <div className="w-full lg:w-[1360px] flex justify-center items-center py-[24px] mt-8 border-t border-[#78767D] px-6 lg:px-[40px]">
-          <p className="text-[14px] md:text-[18px] font-medium font-dmsans text-black text-center">
-            © 2025. JobHunt Inc. • All Rights Reserved
-          </p>
-        </div>
+                {/* Services Column */}
+      <div className="flex flex-col items-center lg:items-start w-full lg:w-1/6 text-center lg:text-left">
+        <h3 className="text-xl lg:text-2xl font-bold font-manrope text-[#1B1C1C]">
+          Services
+        </h3>
+        <ul className="mt-2 space-y-1">
+          <li className="text-[#993D6F] font-dmsans text-sm lg:text-base">Who’s Hiring</li>
+          <li className="text-[#993D6F] font-dmsans text-sm lg:text-base">Resume Templates</li>
+          <li className="text-[#993D6F] font-dmsans text-sm lg:text-base">Resume Builder</li>
+        </ul>
       </div>
-    </footer>
+
+      {/* Company Column */}
+      <div className="flex flex-col items-center lg:items-start w-full lg:w-1/6 text-center lg:text-left">
+        <h3 className="text-xl lg:text-2xl font-bold font-manrope text-[#1B1C1C]">
+          Company
+        </h3>
+        <ul className="mt-2 space-y-1">
+          <li className="text-[#993D6F] font-dmsans text-sm lg:text-base">About</li>
+          <li className="text-[#993D6F] font-dmsans text-sm lg:text-base">Get In Touch</li>
+          <li className="text-[#993D6F] font-dmsans text-sm lg:text-base">Privacy Policies</li>
+          <li className="text-[#993D6F] font-dmsans text-sm lg:text-base">Terms & Conditions</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* Footer Bottom */}
+    <div className="w-full flex justify-center items-center py-6 mt-8 border-t border-[#78767D]">
+      <p className="text-xs lg:text-sm font-medium font-dmsans text-black text-center">
+        © 2025 JobHunt Inc. • All Rights Reserved
+      </p>
+    </div>
+  </div>
+</footer>
   );
 }

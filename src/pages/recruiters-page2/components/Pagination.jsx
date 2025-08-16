@@ -7,8 +7,8 @@ function Pagination() {
   className="
     flex flex-row justify-center items-center
     px-6 py-2.5 gap-6
-    w-[440px] md:w-[1230px] 
-    h-[76px]
+    w-full 
+    h-auto
   "
 >
       {/* Previous Button */}
